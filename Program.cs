@@ -10,45 +10,147 @@ namespace Poject
             Console.WriteLine("Please, choose the number of data type you prefer to work with:");
             Console.WriteLine("int     - 1");
             Console.WriteLine("string  - 2");
-            Console.WriteLine("float   - 3");
+            Console.WriteLine("double   - 3");
             Console.WriteLine("decimal - 4");            
             Console.WriteLine("float   - 5");
             int type_of_data = int.Parse(Console.ReadLine());
+            Console.Write("Initial array :");
             switch(type_of_data)
             {
                 case 1:
                 {
                     int[] array = new int[10];
-                    for (int i = 0; i < 9; i++)
+                    for (int i = 0; i < 10; i++)
+                    {
                         array[i] = random.Next(-10,10);
+                        Console.Write($"{array[i]} ");
+                    }
+                    Console.WriteLine("\n Array after Pop method: ");
+                    ArrayHelper.Pop(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                                    
+                    Console.WriteLine("\n Array after Pushing element 100: ");
+                    int n = ArrayHelper.Push(ref array, 100);
+                    for (int i = 0; i < n; i++)
+                        Console.Write($"{array[i]} ");
+                    
+                    Console.WriteLine("\n Array after Shift method: ");
+                    ArrayHelper.Shift(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                
+                    Console.WriteLine("\n Array after UnShift element 100: ");
+                    n = ArrayHelper.UnShift(ref array,100);
+                    for (int i = 0; i < n; i++)
+                        Console.Write($"{array[i]} ");
                 }
                     break;
                 case 2:
                 {
-                    int[] array = new int[10];
+                    string[] array = {"a", "b", "c", "d", "e",
+                                      "f", "g", "h", "j", "k"};
+                    for(int i = 0; i < 10; i++)
+                        Console.Write($"{array[i]} ");
+                    Console.WriteLine("\n Array after Pop method: ");
+                    ArrayHelper.Pop(ref array);
                     for (int i = 0; i < 9; i++)
-                        array[i] = random.Next(-10,10);
+                        Console.Write($"{array[i]} ");
+                                    
+                    Console.WriteLine("\n Array after Pushing element 100: ");
+                    for (int i = 0; i < ArrayHelper.Push(ref array, "100"); i++)
+                        Console.Write($"{array[i]} ");
+                    
+                    Console.WriteLine("\n Array after Shift method: ");
+                    ArrayHelper.Shift(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                
+                    Console.WriteLine("\n Array after UnShift element 101: ");
+                    for (int i = 0; i < ArrayHelper.UnShift(ref array,"101"); i++)
+                        Console.Write($"{array[i]} ");
                 }
                     break;
                 case 3:
                 {
-                    int[] array = new int[10];
-                    for (int i = 0; i < 9; i++)
+                    double[] array = new double[10];
+                    for (int i = 0; i < 10; i++)
+                    {
                         array[i] = random.Next(-10,10);
+                        Console.Write($"{array[i]} ");
+                    Console.WriteLine("\n Array after Pop method: ");
+                    ArrayHelper.Pop(ref array);
+                    for (i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                                    
+                    Console.WriteLine("\n Array after Pushing element 100: ");
+                    for (i = 0; i < ArrayHelper.Push(ref array, 100); i++)
+                        Console.Write($"{array[i]} ");
+                    
+                    Console.WriteLine("\n Array after Shift method: ");
+                    ArrayHelper.Shift(ref array);
+                    for (i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                
+                    Console.WriteLine("\n Array after UnShift element 101: ");
+                    for (i = 0; i < ArrayHelper.UnShift(ref array,101); i++)
+                        Console.Write($"{array[i]} ");
+                    }
                 }
                     break;
                 case 4:
                 {
-                    int[] array = new int[10];
-                    for (int i = 0; i < 9; i++)
+                    decimal[] array = new decimal[10];
+                    for (int i = 0; i < 10; i++)
+                    {
                         array[i] = random.Next(-10,10);
+                        Console.Write($"{array[i]} ");
+                    }
+                                        Console.WriteLine("\n Array after Pop method: ");
+                    ArrayHelper.Pop(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                                    
+                    Console.WriteLine("\n Array after Pushing element 100: ");
+                    for (int i = 0; i < ArrayHelper.Push(ref array, 100); i++)
+                        Console.Write($"{array[i]} ");
+                    
+                    Console.WriteLine("\n Array after Shift method: ");
+                    ArrayHelper.Shift(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                
+                    Console.WriteLine("\n Array after UnShift element 101: ");
+                    for (int i = 0; i < ArrayHelper.UnShift(ref array,101); i++)
+                        Console.Write($"{array[i]} ");
+                    
                 }
                     break;
                 case 5:
                 {
-                    int[] array = new int[10];
-                    for (int i = 0; i < 9; i++)
+                    float[] array = new float[10];
+                    for (int i = 0; i < 10; i++)
+                    {
                         array[i] = random.Next(-10,10);
+                        Console.Write($"{array[i]} ");
+                    }
+                                        Console.WriteLine("\n Array after Pop method: ");
+                    ArrayHelper.Pop(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                                    
+                    Console.WriteLine("\n Array after Pushing element 100: ");
+                    for (int i = 0; i < ArrayHelper.Push(ref array, 100); i++)
+                        Console.Write($"{array[i]} ");
+                    
+                    Console.WriteLine("\n Array after Shift method: ");
+                    ArrayHelper.Shift(ref array);
+                    for (int i = 0; i < 9; i++)
+                        Console.Write($"{array[i]} ");
+                
+                    Console.WriteLine("\n Array after UnShift element 101: ");
+                    for (int i = 0; i < ArrayHelper.UnShift(ref array,101); i++)
+                        Console.Write($"{array[i]} ");
                 }
                     break;             
                 default:
