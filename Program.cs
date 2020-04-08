@@ -6,7 +6,6 @@ namespace Poject
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
             Console.WriteLine("Please, choose the number of data type you prefer to work with:");
             Console.WriteLine("int     - 1");
             Console.WriteLine("string  - 2");
@@ -22,7 +21,7 @@ namespace Poject
                     int[] array = new int[10];
                     for (int i = 0; i < 10; i++)
                     {
-                        array[i] = random.Next(-10,10);
+                        array[i] = (int) new Random().Next(-10,10);
                         Console.Write($"{array[i]} ");
                     }
                     CheckMethodsForArray(array);
@@ -42,7 +41,7 @@ namespace Poject
                     double[] array = new double[10];
                     for (int i = 0; i < 10; i++)
                     {
-                        array[i] = random.Next(-10,10);
+                        array[i] = Math.Round((double) new Random().Next(-10,10),3);
                         Console.Write($"{array[i]} ");
                     }
                     CheckMethodsForArray(array);
@@ -53,7 +52,7 @@ namespace Poject
                     decimal[] array = new decimal[10];
                     for (int i = 0; i < 10; i++)
                     {
-                        array[i] = random.Next(-10,10);
+                        array[i] = Math.Round((decimal) new Random().Next(-10,10),3);
                         Console.Write($"{array[i]} ");
                     }
                     CheckMethodsForArray(array);
@@ -64,7 +63,7 @@ namespace Poject
                     float[] array = new float[10];
                     for (int i = 0; i < 10; i++)
                     {
-                        array[i] = random.Next(-10,10);
+                        array[i] = (float) new Random().Next(-10,10);
                         Console.Write($"{array[i]} ");
                     }
                     CheckMethodsForArray(array);
@@ -331,22 +330,22 @@ namespace Poject
         //Special methods for checking Class ArrayHelper for any type of data:
         static void CheckMethodsForArray(int[] array)
         {
-        Console.WriteLine("after Pop method:  ");
+        Console.WriteLine("\nafter Pop method:  ");
         ArrayHelper.Pop(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");                   
         
-        Console.WriteLine("after Pushing element 100: ");
+        Console.WriteLine("\nafter Pushing element 100: ");
         int n = ArrayHelper.Push(ref array, 100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");    
         
-        Console.WriteLine("after Shift method: ");
+        Console.WriteLine("\nafter Shift method: ");
         ArrayHelper.Shift(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");
 
-        Console.WriteLine("after UnShift element 100: ");
+        Console.WriteLine("\nafter UnShift element 100: ");
         n = ArrayHelper.UnShift(ref array,100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");
@@ -354,22 +353,22 @@ namespace Poject
 
         static void CheckMethodsForArray(string[] array)
         {
-        Console.WriteLine("after Pop method:  ");
+        Console.WriteLine("\nafter Pop method:  ");
         ArrayHelper.Pop(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");                   
         
-        Console.WriteLine("after Pushing element 100: ");
+        Console.WriteLine("\nafter Pushing element 100: ");
         int n = ArrayHelper.Push(ref array, "100");
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");    
         
-        Console.WriteLine("after Shift method: ");
+        Console.WriteLine("\nafter Shift method: ");
         ArrayHelper.Shift(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");
 
-        Console.WriteLine("after UnShift element 100: ");
+        Console.WriteLine("\nafter UnShift element 100: ");
         n = ArrayHelper.UnShift(ref array,"100");
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");
@@ -377,22 +376,22 @@ namespace Poject
 
         static void CheckMethodsForArray(double[] array)
         {
-        Console.WriteLine("after Pop method:  ");
+        Console.WriteLine("\nafter Pop method:  ");
         ArrayHelper.Pop(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");                   
         
-        Console.WriteLine("after Pushing element 100: ");
+        Console.WriteLine("\nafter Pushing element 100: ");
         int n = ArrayHelper.Push(ref array, 100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");    
         
-        Console.WriteLine("after Shift method: ");
+        Console.WriteLine("\nafter Shift method: ");
         ArrayHelper.Shift(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");
 
-        Console.WriteLine("after UnShift element 100: ");
+        Console.WriteLine("\nafter UnShift element 100: ");
         n = ArrayHelper.UnShift(ref array,100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");
@@ -400,22 +399,22 @@ namespace Poject
 
         static void CheckMethodsForArray(decimal[] array)
         {
-        Console.WriteLine("after Pop method:  ");
+        Console.WriteLine("\nafter Pop method:  ");
         ArrayHelper.Pop(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");                   
         
-        Console.WriteLine("after Pushing element 100: ");
+        Console.WriteLine("\nafter Pushing element 100: ");
         int n = ArrayHelper.Push(ref array, 100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");    
         
-        Console.WriteLine("after Shift method: ");
+        Console.WriteLine("\nafter Shift method: ");
         ArrayHelper.Shift(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");
 
-        Console.WriteLine("after UnShift element 100: ");
+        Console.WriteLine("\nafter UnShift element 100: ");
         n = ArrayHelper.UnShift(ref array,100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");
@@ -423,22 +422,22 @@ namespace Poject
 
         static void CheckMethodsForArray(float[] array)
         {
-        Console.WriteLine("after Pop method:  ");
+        Console.WriteLine("\nafter Pop method:  ");
         ArrayHelper.Pop(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");                   
         
-        Console.WriteLine("after Pushing element 100: ");
+        Console.WriteLine("\nafter Pushing element 100: ");
         int n = ArrayHelper.Push(ref array, 100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");    
         
-        Console.WriteLine("after Shift method: ");
+        Console.WriteLine("\nafter Shift method: ");
         ArrayHelper.Shift(ref array);
         for (int i = 0; i < 9; i++)
             Console.Write($"{array[i]} ");
 
-        Console.WriteLine("after UnShift element 100: ");
+        Console.WriteLine("\nafter UnShift element 100: ");
         n = ArrayHelper.UnShift(ref array,100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");
