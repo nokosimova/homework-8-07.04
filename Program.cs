@@ -326,7 +326,7 @@ namespace Poject
             array = arraytohelp;
             return del_element;
         }
-        public static decimal Push(ref decimal[] array, decimal new_elem)
+        public static int Push(ref decimal[] array, decimal new_elem)
         {
             
             int n  = array.Length;
@@ -350,7 +350,7 @@ namespace Poject
             array = arraytohelp;
             return del_element;
         }
-        public static decimal UnShift(ref decimal[] array, decimal new_elem)
+        public static int UnShift(ref decimal[] array, decimal new_elem)
         {
             
             int n  = array.Length;
@@ -375,7 +375,7 @@ namespace Poject
             array = arraytohelp;
             return del_element;
         }
-        public static float Push(ref float[] array, float new_elem)
+        public static int Push(ref float[] array, float new_elem)
         {
             
             int n  = array.Length;
@@ -399,7 +399,7 @@ namespace Poject
             array = arraytohelp;
             return del_element;
         }
-        public static float UnShift(ref float[] array, float new_elem)
+        public static int UnShift(ref float[] array, float new_elem)
         {
             
             int n  = array.Length;
@@ -433,7 +433,98 @@ namespace Poject
         n = ArrayHelper.UnShift(ref array,100);
         for (int i = 0; i < n; i++)
             Console.Write($"{array[i]} ");
-   
+        }
+
+        static void CheckMethodsForArray(string[] array)
+        {
+        Console.WriteLine("after Pop method:  ");
+        ArrayHelper.Pop(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");                   
+        
+        Console.WriteLine("after Pushing element 100: ");
+        int n = ArrayHelper.Push(ref array, "100");
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");    
+        
+        Console.WriteLine("after Shift method: ");
+        ArrayHelper.Shift(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");
+
+        Console.WriteLine("after UnShift element 100: ");
+        n = ArrayHelper.UnShift(ref array,"100");
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");
+        }
+
+        static void CheckMethodsForArray(double[] array)
+        {
+        Console.WriteLine("after Pop method:  ");
+        ArrayHelper.Pop(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");                   
+        
+        Console.WriteLine("after Pushing element 100: ");
+        int n = ArrayHelper.Push(ref array, 100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");    
+        
+        Console.WriteLine("after Shift method: ");
+        ArrayHelper.Shift(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");
+
+        Console.WriteLine("after UnShift element 100: ");
+        n = ArrayHelper.UnShift(ref array,100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");
+        }
+
+        static void CheckMethodsForArray(decimal[] array)
+        {
+        Console.WriteLine("after Pop method:  ");
+        ArrayHelper.Pop(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");                   
+        
+        Console.WriteLine("after Pushing element 100: ");
+        int n = ArrayHelper.Push(ref array, 100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");    
+        
+        Console.WriteLine("after Shift method: ");
+        ArrayHelper.Shift(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");
+
+        Console.WriteLine("after UnShift element 100: ");
+        n = ArrayHelper.UnShift(ref array,100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");
+        }
+
+        static void CheckMethodsForArray(float[] array)
+        {
+        Console.WriteLine("after Pop method:  ");
+        ArrayHelper.Pop(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");                   
+        
+        Console.WriteLine("after Pushing element 100: ");
+        int n = ArrayHelper.Push(ref array, 100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");    
+        
+        Console.WriteLine("after Shift method: ");
+        ArrayHelper.Shift(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");
+
+        Console.WriteLine("after UnShift element 100: ");
+        n = ArrayHelper.UnShift(ref array,100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");
         }
     }
 }
