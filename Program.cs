@@ -411,5 +411,29 @@ namespace Poject
             array = arraytohelp;
             return array.Length;
         }
+        //Special methods for checking Class ArrayHelper for any type of data:
+        static void CheckMethodsForArray(int[] array)
+        {
+        Console.WriteLine("after Pop method:  ");
+        ArrayHelper.Pop(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");                   
+        
+        Console.WriteLine("after Pushing element 100: ");
+        int n = ArrayHelper.Push(ref array, 100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");    
+        
+        Console.WriteLine("after Shift method: ");
+        ArrayHelper.Shift(ref array);
+        for (int i = 0; i < 9; i++)
+            Console.Write($"{array[i]} ");
+
+        Console.WriteLine("after UnShift element 100: ");
+        n = ArrayHelper.UnShift(ref array,100);
+        for (int i = 0; i < n; i++)
+            Console.Write($"{array[i]} ");
+   
+        }
     }
 }
