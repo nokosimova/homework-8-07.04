@@ -25,25 +25,7 @@ namespace Poject
                         array[i] = random.Next(-10,10);
                         Console.Write($"{array[i]} ");
                     }
-                    Console.WriteLine("\n Array after Pop method: ");
-                    ArrayHelper.Pop(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                                    
-                    Console.WriteLine("\n Array after Pushing element 100: ");
-                    int n = ArrayHelper.Push(ref array, 100);
-                    for (int i = 0; i < n; i++)
-                        Console.Write($"{array[i]} ");
-                    
-                    Console.WriteLine("\n Array after Shift method: ");
-                    ArrayHelper.Shift(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                
-                    Console.WriteLine("\n Array after UnShift element 100: ");
-                    n = ArrayHelper.UnShift(ref array,100);
-                    for (int i = 0; i < n; i++)
-                        Console.Write($"{array[i]} ");
+                    CheckMethodsForArray(array);
                 }
                     break;
                 case 2:
@@ -52,23 +34,7 @@ namespace Poject
                                       "f", "g", "h", "j", "k"};
                     for(int i = 0; i < 10; i++)
                         Console.Write($"{array[i]} ");
-                    Console.WriteLine("\n Array after Pop method: ");
-                    ArrayHelper.Pop(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                                    
-                    Console.WriteLine("\n Array after Pushing element 100: ");
-                    for (int i = 0; i < ArrayHelper.Push(ref array, "100"); i++)
-                        Console.Write($"{array[i]} ");
-                    
-                    Console.WriteLine("\n Array after Shift method: ");
-                    ArrayHelper.Shift(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                
-                    Console.WriteLine("\n Array after UnShift element 101: ");
-                    for (int i = 0; i < ArrayHelper.UnShift(ref array,"101"); i++)
-                        Console.Write($"{array[i]} ");
+                    CheckMethodsForArray(array);
                 }
                     break;
                 case 3:
@@ -78,24 +44,8 @@ namespace Poject
                     {
                         array[i] = random.Next(-10,10);
                         Console.Write($"{array[i]} ");
-                    Console.WriteLine("\n Array after Pop method: ");
-                    ArrayHelper.Pop(ref array);
-                    for (i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                                    
-                    Console.WriteLine("\n Array after Pushing element 100: ");
-                    for (i = 0; i < ArrayHelper.Push(ref array, 100); i++)
-                        Console.Write($"{array[i]} ");
-                    
-                    Console.WriteLine("\n Array after Shift method: ");
-                    ArrayHelper.Shift(ref array);
-                    for (i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                
-                    Console.WriteLine("\n Array after UnShift element 101: ");
-                    for (i = 0; i < ArrayHelper.UnShift(ref array,101); i++)
-                        Console.Write($"{array[i]} ");
                     }
+                    CheckMethodsForArray(array);
                 }
                     break;
                 case 4:
@@ -106,24 +56,7 @@ namespace Poject
                         array[i] = random.Next(-10,10);
                         Console.Write($"{array[i]} ");
                     }
-                                        Console.WriteLine("\n Array after Pop method: ");
-                    ArrayHelper.Pop(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                                    
-                    Console.WriteLine("\n Array after Pushing element 100: ");
-                    for (int i = 0; i < ArrayHelper.Push(ref array, 100); i++)
-                        Console.Write($"{array[i]} ");
-                    
-                    Console.WriteLine("\n Array after Shift method: ");
-                    ArrayHelper.Shift(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                
-                    Console.WriteLine("\n Array after UnShift element 101: ");
-                    for (int i = 0; i < ArrayHelper.UnShift(ref array,101); i++)
-                        Console.Write($"{array[i]} ");
-                    
+                    CheckMethodsForArray(array);
                 }
                     break;
                 case 5:
@@ -134,23 +67,7 @@ namespace Poject
                         array[i] = random.Next(-10,10);
                         Console.Write($"{array[i]} ");
                     }
-                                        Console.WriteLine("\n Array after Pop method: ");
-                    ArrayHelper.Pop(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                                    
-                    Console.WriteLine("\n Array after Pushing element 100: ");
-                    for (int i = 0; i < ArrayHelper.Push(ref array, 100); i++)
-                        Console.Write($"{array[i]} ");
-                    
-                    Console.WriteLine("\n Array after Shift method: ");
-                    ArrayHelper.Shift(ref array);
-                    for (int i = 0; i < 9; i++)
-                        Console.Write($"{array[i]} ");
-                
-                    Console.WriteLine("\n Array after UnShift element 101: ");
-                    for (int i = 0; i < ArrayHelper.UnShift(ref array,101); i++)
-                        Console.Write($"{array[i]} ");
+                    CheckMethodsForArray(array);
                 }
                     break;             
                 default:
@@ -158,7 +75,6 @@ namespace Poject
                 break;
             }
         }
-    }
 
 
     //All methods constructed without using List
@@ -411,6 +327,7 @@ namespace Poject
             array = arraytohelp;
             return array.Length;
         }
+    }
         //Special methods for checking Class ArrayHelper for any type of data:
         static void CheckMethodsForArray(int[] array)
         {
