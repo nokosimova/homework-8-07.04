@@ -6,7 +6,55 @@ namespace Poject
     {
         static void Main(string[] args)
         {
- //           int[] a = {1,4,5,8,7,8,9,10};
+            Random random = new Random();
+            Console.WriteLine("Please, choose the number of data type you prefer to work with:");
+            Console.WriteLine("int     - 1");
+            Console.WriteLine("string  - 2");
+            Console.WriteLine("float   - 3");
+            Console.WriteLine("decimal - 4");            
+            Console.WriteLine("float   - 5");
+            int type_of_data = int.Parse(Console.ReadLine());
+            switch(type_of_data)
+            {
+                case 1:
+                {
+                    int[] array = new int[10];
+                    for (int i = 0; i < 9; i++)
+                        array[i] = random.Next(-10,10);
+                }
+                    break;
+                case 2:
+                {
+                    int[] array = new int[10];
+                    for (int i = 0; i < 9; i++)
+                        array[i] = random.Next(-10,10);
+                }
+                    break;
+                case 3:
+                {
+                    int[] array = new int[10];
+                    for (int i = 0; i < 9; i++)
+                        array[i] = random.Next(-10,10);
+                }
+                    break;
+                case 4:
+                {
+                    int[] array = new int[10];
+                    for (int i = 0; i < 9; i++)
+                        array[i] = random.Next(-10,10);
+                }
+                    break;
+                case 5:
+                {
+                    int[] array = new int[10];
+                    for (int i = 0; i < 9; i++)
+                        array[i] = random.Next(-10,10);
+                }
+                    break;             
+                default:
+                    Console.WriteLine("Incorrect enter, try again");
+                break;
+            }
         }
     }
 
