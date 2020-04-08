@@ -114,7 +114,7 @@ namespace Poject
             return array.Length;
         }
 
-                /*methods with DOUBLE parameters */
+        /*methods with DOUBLE parameters */
         public static double Pop(ref double[] array) 
         {
             int n  = array.Length;
@@ -163,6 +163,103 @@ namespace Poject
             array = arraytohelp;
             return array.Length;
         }
+        /*methods with DECIMAL parameters */
+        public static decimal Pop(ref decimal[] array) 
+        {
+            int n  = array.Length;
+            decimal del_element = array[n-1];
+            decimal[] arraytohelp = new decimal[n-1];
+            for (int i = 0; i < n-1; i++)
+            {
+                arraytohelp[i] = array[i];
+            }
+            array = arraytohelp;
+            return del_element;
+        }
+        public static decimal Push(ref decimal[] array, decimal new_elem)
+        {
+            
+            int n  = array.Length;
+            decimal[] arraytohelp = new decimal[n+1];
+            for (int i = 0; i < n+1; i++)
+            {
+                arraytohelp[i] = (i == n)?new_elem:array[i];
+            }
+            array = arraytohelp;
+            return array.Length;
+        }
+        public static decimal Shift(ref decimal[] array) 
+        {
+            int n  = array.Length;
+            decimal del_element = array[0];
+            decimal[] arraytohelp = new decimal[n-1];
+            for (int i = 1; i < n; i++)
+            {
+                arraytohelp[i-1] = array[i];
+            }
+            array = arraytohelp;
+            return del_element;
+        }
+        public static decimal UnShift(ref decimal[] array, decimal new_elem)
+        {
+            
+            int n  = array.Length;
+            decimal[] arraytohelp = new decimal[n+1];
+            for (int i = 0; i < n+1; i++)
+            {
+                arraytohelp[i] = (i == 0)?new_elem:array[i-1];
+            }
+            array = arraytohelp;
+            return array.Length;
+        }
+        /*methods with FLOAT parameters */
+        public static float Pop(ref float[] array) 
+        {
+            int n  = array.Length;
+            float del_element = array[n-1];
+            float[] arraytohelp = new float[n-1];
+            for (int i = 0; i < n-1; i++)
+            {
+                arraytohelp[i] = array[i];
+            }
+            array = arraytohelp;
+            return del_element;
+        }
+        public static float Push(ref float[] array, float new_elem)
+        {
+            
+            int n  = array.Length;
+            float[] arraytohelp = new float[n+1];
+            for (int i = 0; i < n+1; i++)
+            {
+                arraytohelp[i] = (i == n)?new_elem:array[i];
+            }
+            array = arraytohelp;
+            return array.Length;
+        }
+        public static float Shift(ref float[] array) 
+        {
+            int n  = array.Length;
+            float del_element = array[0];
+            float[] arraytohelp = new float[n-1];
+            for (int i = 1; i < n; i++)
+            {
+                arraytohelp[i-1] = array[i];
+            }
+            array = arraytohelp;
+            return del_element;
+        }
+        public static float UnShift(ref float[] array, float new_elem)
+        {
+            
+            int n  = array.Length;
+            float[] arraytohelp = new float[n+1];
+            for (int i = 0; i < n+1; i++)
+            {
+                arraytohelp[i] = (i == 0)?new_elem:array[i-1];
+            }
+            array = arraytohelp;
+            return array.Length;
+        }
     }
- 
 }
